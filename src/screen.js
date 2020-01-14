@@ -32,4 +32,14 @@ export class Screen {
         this.context.fillStyle = color;
         this.context.fillRect(0, 0, this.width, this.height);
     }
+
+    print(x, y, text) {
+        this.context.fillStyle = "#FFFFFF";
+        this.context.font = "22px Georgia";
+        this.context.fillText(text, x, y);
+    }
+
+    drawImage(x, y, imageName) {
+        this.context.drawImage(this.images[imageName], x, y);
+    }
 }
